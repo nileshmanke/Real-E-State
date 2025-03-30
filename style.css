@@ -26,3 +26,76 @@
 .social-icons a:hover {
     color: #007bff;
 }
+
+.contact-card {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px;
+}
+.contact-card:hover {
+    transform: scale(1.05);
+}
+.contact-img {
+            width: 60px;  /* Smaller size */
+            height: 60px;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+}
+
+.contact-container {
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+.form-control {
+    border-radius: 5px;
+}
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.footer {
+    background: #343a40;
+    color: #ffffff;
+    padding: 40px 0;
+}
+.footer h5 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+.footer ul li {
+    margin-bottom: 8px;
+}
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer ul li a:hover {
+    color: #f8d210;
+}
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: #f8d210;
+}
+.sub-footer {
+    background: #212529;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
