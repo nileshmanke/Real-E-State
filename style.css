@@ -83,7 +83,7 @@
 .footer ul li a:hover {
     color: #f8d210;
 }
-.social-icons a {
+.footer .social-icons a {
     color: white;
     font-size: 18px;
     margin-right: 15px;
