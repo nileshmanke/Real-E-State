@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("O9IFE8zq5fjh3gYYw"); // Replace with your EmailJS Public Key
+    emailjs.init("O9IFE8zq5fjh3gYYw"); 
 
     let form = document.getElementById("contact-form");
     if (form) {
@@ -23,13 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-let isSubmitting = false; // Flag to prevent duplicate submissions
+let isSubmitting = false; 
 
 function sendEmail(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
 
-    if (isSubmitting) return; // Stop if already submitting
-    isSubmitting = true; // Set flag to prevent multiple submissions
+    if (isSubmitting) return; 
+    isSubmitting = true; 
 
     let submitButton = document.getElementById("submit-btn");
     if (!submitButton) {
@@ -37,11 +37,11 @@ function sendEmail(event) {
         return;
     }
 
-    // Disable button & show loading text
+   
     submitButton.disabled = true;
     submitButton.textContent = "Sending... ⏳";
 
-    // Get form values
+   
     let formData = {
         name: document.getElementById("name").value.trim(),
         email: document.getElementById("email").value.trim(),
@@ -50,14 +50,14 @@ function sendEmail(event) {
         message: document.getElementById("message").value.trim(),
     };
 
-    // Validate required fields
+  
     if (!formData.name || !formData.email || !formData.message) {
         alert("Please fill in all required fields! ❌");
         resetFormState();
         return;
     }
 
-    // Send Email via EmailJS
+   
     emailjs.send("service_b810lei", "template_ywcyiyj", formData)
         .then(function () {
             alert("Message Sent Successfully! ✅");
@@ -70,12 +70,12 @@ function sendEmail(event) {
         .finally(resetFormState);
 }
 
-// Function to reset button & submission state
+
 function resetFormState() {
     let submitButton = document.getElementById("submit-btn");
     if (submitButton) {
         submitButton.disabled = false;
         submitButton.textContent = "Send Message";
     }
-    isSubmitting = false; // Allow new submissions
+    isSubmitting = false;
 }
